@@ -1,0 +1,23 @@
+1. cv2.Canny(image, threshold1, threshold2)
+    
+    The parameter threshold1 and threshold2 are the two threshold values used in hysteresis procedure
+
+    Hysteresis:
+
+2. Explanation
+    if a pixel gradient is:
+        i.    greater than threshold2, the pixel is accepted as an edge
+        ii.   below threshold1, the pixel is rejected, and is not an edge
+        iii.  lie between threshold1 and threshold2
+                + Based on their connectivity, they are classified as edges or non-edges 
+                + If they connected to "sure-edges" (> threshold2), they are edges 
+                + Otherwise, they will be discarded
+3.  Terminology
+    + Pixel: the smallest unit of an image. They are accessed by (x, y) coordinate. Origin (0, 0) is located on the top left
+            No matter how many values/ pixel, each of which is represented by any integer whose range is from 0 to 255
+        i.  GRAYSCALE: Each pixel has 1 value.
+        ii. BGR: Each pixel has 3 values.
+    + Pixel Gradient Value (in an image): represents in intensity of pixel values in a particular direction
+        i.  Gradient Magtitude
+        ii. Gradient Direction/ Orientation
+        
